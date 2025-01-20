@@ -1,5 +1,10 @@
 #pragma once
 
+/*
+ * time: 2025-1-20
+ * author: mabu
+ */
+
 #include <cstddef>
 #include "mabustddef.h"
 
@@ -45,7 +50,7 @@ namespace mabustl {
 
     // 除法
     template<class T>
-    struct devides : public binary_function<T, T, T> {
+    struct divides : public binary_function<T, T, T> {
         T operator()(const T &x, const T &y) const {
             return x / y;
         }
@@ -247,7 +252,8 @@ template <> struct hash<Type>{\
 
 #undef MABUSTL_TRIVIAL_HASH_FUNTION
 
-    // 浮点数，逐位哈希
+    // 浮点数(float, double, long double)，逐位哈希
+    // 这里用的是Folwer-Noll-Vo算法
     inline size_t bitwise_hash(const unsigned char *first, const size_t count) {
         // 64 位
 #if (_MSC_VER&&_WIN64)||((__GNUC__||__clang__)&&__SIZEOF_POINTER__==8)
