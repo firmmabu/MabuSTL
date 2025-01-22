@@ -6,7 +6,6 @@
  */
 
 #include <cstddef>
-#include "mabustddef.h"
 
 namespace mabustl {
     // 一元函数的参数类型和返回值
@@ -250,7 +249,7 @@ template <> struct hash<Type>{\
 
     MABUSTL_TRIVIAL_HASH_FUNCTION(unsigned long long)
 
-#undef MABUSTL_TRIVIAL_HASH_FUNTION
+#undef MABUSTL_TRIVIAL_HASH_FUNCTION
 
     // 浮点数(float, double, long double)，逐位哈希
     // 这里用的是Folwer-Noll-Vo算法

@@ -1,5 +1,9 @@
 #include <iostream>
-#include "mabustddef.h"
+#include "mabu_stddef.h"
+#include "mabu_functional.h"
+#include "mabu_type_traits.h"
+#include "mabu_iterator.h"
+#include "mabu_utility.h"
 
 int test_throw() {
     //THROW_LENGTH_ERROR_IF(true,"length_error");
