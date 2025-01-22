@@ -23,10 +23,8 @@ namespace mabustl {
     struct pair;
 
     template<class T>
-    struct is_pair : mabustl::m_false_type {
-    };
+    struct is_pair : mabustl::m_false_type {};
 
     template<class T1, class T2>
-    struct is_pair<mabustl::pair<T1, T2> > : mabustl::m_true_type {
-    };
+    struct is_pair<mabustl::pair<T1, T2> > : mabustl::m_true_type {};
 }

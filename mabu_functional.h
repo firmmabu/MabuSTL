@@ -26,7 +26,7 @@ namespace mabustl {
     // 加法
     template<class T>
     struct plus : public binary_function<T, T, T> {
-        T operator()(const T &x, const T &y) const {
+        T operator()(const T& x, const T& y) const {
             return x + y;
         }
     };
@@ -34,7 +34,7 @@ namespace mabustl {
     // 减法
     template<class T>
     struct minus : public binary_function<T, T, T> {
-        T operator()(const T &x, const T &y) const {
+        T operator()(const T& x, const T& y) const {
             return x - y;
         }
     };
@@ -42,7 +42,7 @@ namespace mabustl {
     // 乘法
     template<class T>
     struct multiplies : public binary_function<T, T, T> {
-        T operator()(const T &x, const T &y) const {
+        T operator()(const T& x, const T& y) const {
             return x * y;
         }
     };
@@ -50,7 +50,7 @@ namespace mabustl {
     // 除法
     template<class T>
     struct divides : public binary_function<T, T, T> {
-        T operator()(const T &x, const T &y) const {
+        T operator()(const T& x, const T& y) const {
             return x / y;
         }
     };
@@ -58,7 +58,7 @@ namespace mabustl {
     // 取模
     template<class T>
     struct modulus : public binary_function<T, T, T> {
-        T operator()(const T &x, const T &y) const {
+        T operator()(const T& x, const T& y) const {
             return x % y;
         }
     };
@@ -66,7 +66,7 @@ namespace mabustl {
     // 否定
     template<class T>
     struct negate : public unarg_function<T, T> {
-        T operator()(const T &x) const {
+        T operator()(const T& x) const {
             return -x;
         }
     };
@@ -86,7 +86,7 @@ namespace mabustl {
     // 等于
     template<class T>
     struct equal_to : public binary_function<T, T, bool> {
-        bool operator()(const T &x, const T &y) const {
+        bool operator()(const T& x, const T& y) const {
             return x == y;
         }
     };
@@ -94,7 +94,7 @@ namespace mabustl {
     // 不等于
     template<class T>
     struct not_equal_to : public binary_function<T, T, bool> {
-        bool operator()(const T &x, const T &y) const {
+        bool operator()(const T& x, const T& y) const {
             return x != y;
         }
     };
@@ -102,7 +102,7 @@ namespace mabustl {
     // 大于
     template<class T>
     struct greater : public binary_function<T, T, bool> {
-        bool operator()(const T &x, const T &y) const {
+        bool operator()(const T& x, const T& y) const {
             return x > y;
         }
     };
@@ -110,7 +110,7 @@ namespace mabustl {
     // 大于等于
     template<class T>
     struct greater_equal : public binary_function<T, T, bool> {
-        bool operator()(const T &x, const T &y) const {
+        bool operator()(const T& x, const T& y) const {
             return x >= y;
         }
     };
@@ -118,7 +118,7 @@ namespace mabustl {
     // 小于
     template<class T>
     struct less : public binary_function<T, T, bool> {
-        bool operator()(const T &x, const T &y) const {
+        bool operator()(const T& x, const T& y) const {
             return x < y;
         }
     };
@@ -126,7 +126,7 @@ namespace mabustl {
     // 小于等于
     template<class T>
     struct less_equal : public binary_function<T, T, bool> {
-        bool operator()(const T &x, const T &y) const {
+        bool operator()(const T& x, const T& y) const {
             return x <= y;
         }
     };
@@ -134,7 +134,7 @@ namespace mabustl {
     // 逻辑与
     template<class T>
     struct logical_and : public binary_function<T, T, T> {
-        T operator()(const T &x, const T &y) const {
+        T operator()(const T& x, const T& y) const {
             return x && y;
         }
     };
@@ -142,7 +142,7 @@ namespace mabustl {
     // 逻辑与
     template<class T>
     struct logical_or : public binary_function<T, T, T> {
-        T operator()(const T &x, const T &y) const {
+        T operator()(const T& x, const T& y) const {
             return x || y;
         }
     };
@@ -150,7 +150,7 @@ namespace mabustl {
     // 逻辑与
     template<class T>
     struct logical_not : public unarg_function<T, bool> {
-        bool operator()(const T &x) const {
+        bool operator()(const T& x) const {
             return !x;
         }
     };
@@ -158,7 +158,7 @@ namespace mabustl {
     // 证同
     template<class T>
     struct identity : public unarg_function<T, T> {
-        const T &operator()(const T &x) const {
+        const T& operator()(const T& x) const {
             return x;
         }
     };
@@ -166,7 +166,7 @@ namespace mabustl {
     // 返回pair的第一个元素
     template<class Pair>
     struct selectFirst : public unarg_function<Pair, typename Pair::first_type> {
-        const typename Pair::first_type &operator()(const Pair &x) const {
+        const typename Pair::first_type& operator()(const Pair& x) const {
             return x.first;
         }
     };
@@ -174,7 +174,7 @@ namespace mabustl {
     // 返回pair的第二个元素
     template<class Pair>
     struct selectSecond : public unarg_function<Pair, typename Pair::second_type> {
-        const typename Pair::second_type &operator()(const Pair &x) const {
+        const typename Pair::second_type& operator()(const Pair& x) const {
             return x.second;
         }
     };
@@ -182,7 +182,7 @@ namespace mabustl {
     // 返回第一参数
     template<class Arg1, class Arg2>
     struct projectFirst : public binary_function<Arg1, Arg2, Arg1> {
-        Arg1 operator()(const Arg1 &x, const Arg2 &y) const {
+        Arg1 operator()(const Arg1& x, const Arg2& y) const {
             return x;
         }
     };
@@ -190,7 +190,7 @@ namespace mabustl {
     // 返回第二参数
     template<class Arg1, class Arg2>
     struct projectSecond : public binary_function<Arg1, Arg2, Arg2> {
-        Arg2 operator()(const Arg1 &x, const Arg2 &y) const {
+        Arg2 operator()(const Arg1& x, const Arg2& y) const {
             return y;
         }
     };
@@ -200,14 +200,13 @@ namespace mabustl {
     // 哈希函数
 
     template<class Key>
-    struct hash {
-    };
+    struct hash {};
 
     // 指针的哈希函数
     template<class T>
-    struct hash<T *> {
+    struct hash<T*> {
         // noexcept关键字: 告诉编译器该函数不会抛异常
-        size_t operator()(const T *p) const noexcept {
+        size_t operator()(const T* p) const noexcept {
             // reinterpret_cast: 不进行任何检查，直接转换
             return reinterpret_cast<size_t>(p);
         }
@@ -253,7 +252,7 @@ template <> struct hash<Type>{\
 
     // 浮点数(float, double, long double)，逐位哈希
     // 这里用的是Folwer-Noll-Vo算法
-    inline size_t bitwise_hash(const unsigned char *first, const size_t count) {
+    inline size_t bitwise_hash(const unsigned char* first, const size_t count) {
         // 64 位
 #if (_MSC_VER&&_WIN64)||((__GNUC__||__clang__)&&__SIZEOF_POINTER__==8)
         const size_t fnv_offset = 14695981039346656037ull;
@@ -266,7 +265,7 @@ template <> struct hash<Type>{\
 
 #endif
         size_t result = fnv_offset;
-        for (size_t i = 0; i < count; ++i) {
+        for(size_t i = 0; i < count; ++i) {
             result ^= (size_t) first[i];
             result *= fnv_prime;
         }
@@ -275,22 +274,22 @@ template <> struct hash<Type>{\
 
     template<>
     struct hash<float> {
-        size_t operator()(const float &val) const {
-            return val == 0.0f ? 0 : bitwise_hash((const unsigned char *) &val, sizeof(float));
+        size_t operator()(const float& val) const {
+            return val == 0.0f ? 0 : bitwise_hash((const unsigned char*) &val, sizeof(float));
         }
     };
 
     template<>
     struct hash<double> {
-        size_t operator()(const double &val) const {
-            return val == 0.0f ? 0 : bitwise_hash((const unsigned char *) &val, sizeof(double));
+        size_t operator()(const double& val) const {
+            return val == 0.0f ? 0 : bitwise_hash((const unsigned char*) &val, sizeof(double));
         }
     };
 
     template<>
     struct hash<long double> {
-        size_t operator()(const long double &val) const {
-            return val == 0.0f ? 0 : bitwise_hash((const unsigned char *) &val, sizeof(long double));
+        size_t operator()(const long double& val) const {
+            return val == 0.0f ? 0 : bitwise_hash((const unsigned char*) &val, sizeof(long double));
         }
     };
 }
