@@ -123,8 +123,6 @@ namespace mabustl {
 
     /* 萃取迭代器的category
      * 继承关系：iterator_traits->iterator_traits_helper->iterator_traits_impl
-     *
-     *
      */
     template<class Iterator>
     typename iterator_traits<Iterator>::iterator_category iterator_category(const Iterator&) {

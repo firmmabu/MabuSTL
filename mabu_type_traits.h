@@ -5,7 +5,6 @@
  * author: mabu
  */
 
-#include <type_traits>
 
 namespace mabustl {
     template<class T, T v>
