@@ -1,8 +1,8 @@
 #include <iostream>
-#include "mabu_stddef.h"
 #include "mabu_functional.h"
-#include "mabu_type_traits.h"
 #include "mabu_iterator.h"
+#include "mabu_stddef.h"
+#include "mabu_type_traits.h"
 #include "mabu_utility.h"
 
 int test_throw() {
@@ -16,5 +16,7 @@ int test_throw() {
 
 int main() {
     //test_throw();
+    std::cout<<sizeof(bool)<<"\n"<<sizeof(unsigned char)<<std::endl;
+    std::cout<<std::is_integral<bool>::value<<std::endl;
     return 0;
 }

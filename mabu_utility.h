@@ -7,8 +7,12 @@
  * author: mabu
  */
 
-// 工具类 包含一些常用的函数
-// move forward swap等
+/*
+ * 实现的功能
+ * 移动语义move 完美转发forward
+ * swap swap_range
+ * 模板类pair pair的swap make_pair
+ */
 
 namespace mabustl {
     // move：一个对象的资源直接移动给另一个对象，输入的对象会被强制转化为右值
