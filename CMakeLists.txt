@@ -15,4 +15,7 @@ add_executable(
         mabu_heap_algorithm.h
         mabu_set_algorithm.h
         mabu_numeric.h
+        mabu_allocator.h
+        mabu_uninitialized.h
+        mabu_memory.h
 )
